@@ -22,3 +22,6 @@
 [submodule "bundle/vim-scriptease"]
 	path = bundle/vim-scriptease
 	url = https://github.com/tpope/vim-scriptease.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
