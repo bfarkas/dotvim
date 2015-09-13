@@ -31,3 +31,6 @@
 [submodule "bundle/vimwiki"]
 	path = bundle/vimwiki
 	url = git://github.com/vim-scripts/vimwiki.git
+[submodule "bundle/vim-latex"]
+	path = bundle/vim-latex
+	url = https://github.com/vim-latex/vim-latex

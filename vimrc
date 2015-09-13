@@ -6,6 +6,7 @@ filetype plugin on
 filetype plugin indent on
 set number
 
+set guifont=Hack:h11 
 colorscheme flattown
 
 " always show vim-airline with powerline fonts
@@ -54,3 +55,6 @@ set tabstop=4
 
 nmap <F8> :TagbarToggle<CR>
 
+"vim latex settings
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
