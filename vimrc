@@ -58,3 +58,5 @@ nmap <F8> :TagbarToggle<CR>
 "vim latex settings
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
+let g:Tex_MultipleCompileFormats = 'dvi,pdf'
+let g:Tex_ViewRule_pdf = 'open -a Preview.app'
