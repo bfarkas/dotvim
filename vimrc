@@ -7,7 +7,7 @@ filetype plugin indent on
 set number
 
 set guifont=Hack:h11 
-colorscheme flattown
+colorscheme flattown-mod
 
 " always show vim-airline with powerline fonts
 set laststatus=2
