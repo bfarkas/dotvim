@@ -38,6 +38,7 @@ Plugin 'vim-latex/vim-latex'
 Plugin 'tpope/vim-scriptease'
 Plugin 'salsifis/vim-transpose'
 Plugin 'vim-scripts/vimwiki'
+Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

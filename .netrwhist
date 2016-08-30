@@ -1,3 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/afs/c3e.cs.tu-bs.de/home/teaching/CuSE/Golze/Lehre.rtfd'
+let g:netrw_dirhist_2='/Users/bfarkas/Documents/git/cfdp/rtems/tests'
+let g:netrw_dirhist_3='/Users/bfarkas/ipy-notebooks'
