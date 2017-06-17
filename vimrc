@@ -115,3 +115,6 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:Tex_MultipleCompileFormats = 'dvi,pdf'
 let g:Tex_ViewRule_pdf = 'open -a Preview.app'
+
+"folding settings, open all folds automatically
+au BufRead * normal zR
