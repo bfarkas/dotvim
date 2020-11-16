@@ -144,7 +144,14 @@ let g:lightline.component_type = {
       \     'linter_errors': 'error',
       \     'linter_ok': 'left',
       \ }
-let g:lightline.active = { 'right': [['filetype'],[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
+let g:lightline.component_function = { 'gitbranch': 'fugitive#head' }
+let g:lightline.active = { 
+      \ 'left': [ [ 'mode', 'paste' ],
+      \           [ 'gitbranch' , 'readonly', 'filename', 'modified' ] ],
+      \ 'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
+      \            [ 'lineinfo' ], 
+      \            [ 'percent' ],
+      \            [ 'filetype' ] ] }
 let g:lightline#ale#indicator_checking = "\uf110 "
 let g:lightline#ale#indicator_warnings = "\uf071 "
 let g:lightline#ale#indicator_errors = "\uf05e "
