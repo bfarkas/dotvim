@@ -2,4 +2,6 @@
 
 after cloning, Vundle.vim needs to be installed.
 
-See instructions here: https://github.com/VundleVim/Vundle.vim
+`$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+
+`$ vim +PluginInstall +qall`
