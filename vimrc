@@ -38,7 +38,7 @@ Plugin 'vim-latex/vim-latex'
 Plugin 'tpope/vim-scriptease'
 Plugin 'salsifis/vim-transpose'
 Plugin 'vim-scripts/vimwiki'
-Plugin 'davidhalter/jedi-vim'
+Plugin 'dense-analysis/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -113,3 +113,8 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:Tex_MultipleCompileFormats = 'dvi,pdf'
 let g:Tex_ViewRule_pdf = 'open -a Preview.app'
+
+"ALE Linters
+let g:ale_linters = {
+\   'python': ['pyls'],
+\}
