@@ -32,7 +32,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-latex/vim-latex'
 Plugin 'tpope/vim-scriptease'
@@ -40,6 +40,8 @@ Plugin 'salsifis/vim-transpose'
 Plugin 'vim-scripts/vimwiki'
 Plugin 'dense-analysis/ale'
 Plugin 'majutsushi/tagbar'
+Plugin 'itchyny/lightline.vim'
+Plugin 'maximbaz/lightline-ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -64,10 +66,10 @@ set mouse=a
 set guifont=Hack:h11 
 colorscheme flattown-mod 
 
-" always show vim-airline with powerline fonts
+" always show lightline
 set laststatus=2
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'flattown'
+"let g:airline_powerline_fonts = 1
+"let g:airline_theme = 'flattown'
 
 map <C-n> :NERDTreeToggle<CR>
 
@@ -122,3 +124,28 @@ let g:ale_linters = {
 \}
 "folding settings, open all folds automatically
 au BufRead * normal zR
+
+" mode is not necessary with lightline
+set noshowmode
+
+" lightline settings
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+let g:lightline.component_expand = {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ }
+let g:lightline.component_type = {
+      \     'linter_checking': 'left',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'left',
+      \ }
+let g:lightline.active = { 'right': [['filetype'],[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
+let g:lightline#ale#indicator_checking = "\uf110 "
+let g:lightline#ale#indicator_warnings = "\uf071 "
+let g:lightline#ale#indicator_errors = "\uf05e "
+let g:lightline#ale#indicator_ok = "\uf00c "
